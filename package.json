@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "async": "^3.2.3",
     "express": "^4.17.2",
     "mongodb": "^4.3.0"
   },
