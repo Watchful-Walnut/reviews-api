@@ -30,7 +30,6 @@ module.exports = {
         }
       }
       async.map(characteristics, (char)=> {
-        console.log(char)
         meta.characteristics[char._id] = {id: char.id, value: char.value}
       })
       async.map(reviews[0].reviews, (review) => {
@@ -38,7 +37,6 @@ module.exports = {
         review.recommend ? meta.recommend.true++ : meta.recommend.false++;
         return;
       })
-      console.log(meta)
       res.send(meta);
     } catch (e) {
       console.log(e);

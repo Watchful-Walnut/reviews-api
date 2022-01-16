@@ -6,11 +6,12 @@
   "dependencies": {
     "async": "^3.2.3",
     "express": "^4.17.2",
-    "mongodb": "^4.3.0"
+    "mongodb": "^4.3.0",
+    "newrelic": "^8.7.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:prod": "node server/server.js"
   },
   "repository": {
     "type": "git",

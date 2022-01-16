@@ -11,7 +11,7 @@ module.exports = {
             }, {$unwind:
                {path: "$reviews.characteristics"}
               }, {$group:
-                 {_id: "$reviews.characteristics.name", value: { $avg: "$reviews.characteristics.value"}, id: {$avg: "$reviews.characteristics.id"}}
+                 {_id: "$reviews.characteristics.name", value: { $avg: "$reviews.characteristics.value"}, id: {$max: "$reviews.characteristics.id"}}
                 }]).toArray();
       return characteristics;
     } catch(e) {return e };

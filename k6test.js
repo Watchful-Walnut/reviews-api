@@ -2,6 +2,7 @@ import http from 'k6/http';
 import { sleep, check } from 'k6';
 import { Counter } from 'k6/metrics';
 
+
 export const requests = new Counter('http_reqs');
 
 export const options = {
@@ -10,7 +11,7 @@ export const options = {
 }
 
 // const url = 'http://localhost:3001/reviews/randomproduct/test';
-const url = 'http://localhost:3001/reviews/randomreview/test';
+const url = 'http://localhost:3001/reviews/meta/test';
 
 export default function () {
   const res = http.get(url);
